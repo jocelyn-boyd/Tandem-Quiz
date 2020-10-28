@@ -19,29 +19,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-hN-Gsq" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-rH-XBl">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-rH-XBl">
                                         <rect key="frame" x="8" y="42.5" width="398" height="4"/>
                                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                                         <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V55-0D-15i">
-                                        <rect key="frame" x="308" y="8" width="98" height="30"/>
-                                        <state key="normal" title="Next Question">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5YL-S5-XNS"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-DQ-wAu">
+                                        <rect key="frame" x="8" y="8" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leadingMargin" id="7mw-sw-JmF"/>
                                     <constraint firstAttribute="height" constant="60" id="BI8-hZ-28N"/>
-                                    <constraint firstItem="V55-0D-15i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="20" symbolic="YES" id="I8h-Qy-upd"/>
                                     <constraint firstAttribute="bottom" secondItem="Mp7-rH-XBl" secondAttribute="bottom" constant="13.5" id="aLK-lQ-M2M"/>
-                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="top" secondItem="V55-0D-15i" secondAttribute="bottom" constant="4.5" id="jFH-GS-VT1"/>
-                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="V55-0D-15i" secondAttribute="trailing" id="mcj-gj-fcz"/>
+                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="8" id="okm-A6-37v"/>
+                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="8" id="p18-hO-2PM"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="LGf-hN-Gsq" secondAttribute="trailingMargin" id="vvK-38-tyB"/>
                                 </constraints>
                             </view>
@@ -77,6 +73,9 @@
                                                         <state key="normal" title="Tandem">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSQ-UA-aut"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
                                                         <rect key="frame" x="0.0" y="104" width="398" height="84"/>
@@ -84,6 +83,9 @@
                                                         <state key="normal" title="Burger Shack">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bd0-bZ-Iyd"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
                                                         <rect key="frame" x="0.0" y="208" width="398" height="83.5"/>
@@ -91,6 +93,9 @@
                                                         <state key="normal" title="Extraordinary Humans">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emw-8V-2aB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
                                                         <rect key="frame" x="0.0" y="311.5" width="398" height="84"/>
@@ -98,6 +103,9 @@
                                                         <state key="normal" title="Devmynd">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-2c-bWo"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -131,17 +139,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="optionFour" destination="8qV-24-p3d" id="2M6-ui-uVA"/>
-                        <outlet property="optionOne" destination="X3x-bg-TYT" id="LpN-Y8-zgO"/>
-                        <outlet property="optionThree" destination="OSm-c7-Ysy" id="Ksf-Hd-U7J"/>
-                        <outlet property="optionTwo" destination="o4W-zq-8ep" id="B56-gE-Geh"/>
+                        <outlet property="buttonFour" destination="8qV-24-p3d" id="p89-IB-mSk"/>
+                        <outlet property="buttonOne" destination="X3x-bg-TYT" id="xcG-sz-Zet"/>
+                        <outlet property="buttonThree" destination="OSm-c7-Ysy" id="FD0-Rv-fye"/>
+                        <outlet property="buttonTwo" destination="o4W-zq-8ep" id="CXP-Mc-jI9"/>
+                        <outlet property="questionCounterLabel" destination="M3b-DQ-wAu" id="E8H-FH-AET"/>
                         <outlet property="questionLabel" destination="O7q-Qf-RXa" id="BSR-BR-LVK"/>
                         <outlet property="triviaProgressBar" destination="Mp7-rH-XBl" id="coU-Be-d8B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="133.92857142857142"/>
+            <point key="canvasLocation" x="-346" y="84"/>
         </scene>
     </scenes>
     <resources>
