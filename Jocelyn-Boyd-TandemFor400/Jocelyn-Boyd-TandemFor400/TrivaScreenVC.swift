@@ -8,11 +8,10 @@
 import UIKit
 
 class TrivaScreenVC: UIViewController {
-
+    
     @IBOutlet var triviaProgressBar: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionCounterLabel: UILabel!
-    
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
     @IBOutlet var buttonThree: UIButton!
@@ -20,7 +19,6 @@ class TrivaScreenVC: UIViewController {
     @IBOutlet var restartButton: UIButton!
     
     var triviaInfo: [Trivia]?
-    
     var currentQuestionIndex: Int = 0
     var score: Int = 0
     var triviaProgressStart: Float = 0.0
@@ -28,9 +26,11 @@ class TrivaScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTriviaDataFromJSON()
-        updateQuestion()
+        configureButtons()
+        showNextQuestion()
+        restartButton.isHidden = true
     }
-        
+    
     // buttonOne thru buttonFour are connected to the following IBAction method
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo?[currentQuestionIndex - 1]
@@ -38,14 +38,14 @@ class TrivaScreenVC: UIViewController {
             score += 1
             let alert = UIAlertController(title: "Correct!", message: "Way to go!", preferredStyle: .alert)
             let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
-                self.updateQuestion()
+                self.showNextQuestion()
             }
             alert.addAction(nextQuestionAction)
             present(alert, animated: true) { self.score += 1 }
         } else {
             let alert = UIAlertController(title: "Sorry!", message: "The correct answer is: \(question!.correct).", preferredStyle: .alert)
             let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
-                self.updateQuestion()
+                self.showNextQuestion()
             }
             alert.addAction(nextQuestionAction)
             present(alert, animated: true)
@@ -55,9 +55,9 @@ class TrivaScreenVC: UIViewController {
     @IBAction func restartButtonPressed(_ sender: UIButton) {
         score = 0
         currentQuestionIndex = 0
-        updateQuestion()
+        showNextQuestion()
         enableMultipleChoiceButtons()
-        updateUI()
+        updateGameStatusBar()
     }
     
     
@@ -75,7 +75,8 @@ class TrivaScreenVC: UIViewController {
         }
     }
     
-    private func updateQuestion() {
+    private func showNextQuestion() {
+        restartButton.isHidden = true
         let question = triviaInfo?[currentQuestionIndex]
         questionLabel.text = question?.question
         
@@ -97,19 +98,23 @@ class TrivaScreenVC: UIViewController {
             buttonFour.isHidden = false
             buttonFour.setTitle(shuffledAnswers?[3], for: .normal)
         }
-        
+        updateTriviaScreen()
+    }
+    
+    private func updateTriviaScreen() {
         if currentQuestionIndex != 5 { // change to 20
             currentQuestionIndex += 1
-            updateUI()
+            updateGameStatusBar()
         } else {
-            disableMultupleChoiceButtonsButtons()
+            restartButton.isHidden = false
             questionLabel.text = "End of Quiz. You scored \(score) / 5!" // change to XX/20
+            disableMultupleChoiceButtonsButtons()
         }
     }
     
-    private func updateUI() {
+    private func updateGameStatusBar() {
         let questionNumber = currentQuestionIndex
-        questionCounterLabel.text? = "Question Number: \(questionNumber)"
+        questionCounterLabel.text? = "\(questionNumber)/10 Questions"
         triviaProgressBar.progress = Float(questionNumber) / 5 // change to 20
     }
     
@@ -125,5 +130,15 @@ class TrivaScreenVC: UIViewController {
         for button in buttons {
             button?.isHidden = true
         }
+    }
+    
+    private func configureButtons() {
+        let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
+        for button in buttons {
+            button?.layer.cornerRadius = 20
+            button?.backgroundColor = UIColor(red: 239 / 255, green: 71 / 255, blue: 111 / 255, alpha: 1)
+        }
+        restartButton.backgroundColor = .systemRed
+        restartButton.layer.cornerRadius = 20
     }
 }
