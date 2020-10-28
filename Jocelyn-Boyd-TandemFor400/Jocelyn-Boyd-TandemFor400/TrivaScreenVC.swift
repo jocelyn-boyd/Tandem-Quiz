@@ -23,6 +23,8 @@ class TrivaScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTriviaDataFromJSON()
+        let question = triviaInfo?[currentQuestionIndex]
+        questionLabel.text = question?.question
     }
     
     private func loadTriviaDataFromJSON() {
@@ -34,10 +36,18 @@ class TrivaScreenVC: UIViewController {
             let data = try Data(contentsOf: interalURL)
             let triviaFromJSON = try Trivia.fetchTrivia(from: data)
             triviaInfo = triviaFromJSON
-            print(triviaInfo)
+            dump(triviaInfo)
         } catch {
             print(error)
         }
     }
-
+    
+    @IBAction func showNextQuestion(_ sender: Any) {
+        currentQuestionIndex += 1
+        if currentQuestionIndex == triviaInfo?.count {
+            currentQuestionIndex = 0
+        }
+        let question = triviaInfo?[currentQuestionIndex]
+        questionLabel.text = question?.question
+    }
 }
