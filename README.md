@@ -22,6 +22,9 @@ The goal is to create an application that displays trivia questions whith multip
 - The correct answer must be revealed after a user has submitted their answer
 - A user can see the score they recieved at the end of the round
 
+## Screenshots
+![image](images/Trivia-Screen.png)
+
 ## How to Run the Game
 - Clone the project
 - Open the project in Xcode
