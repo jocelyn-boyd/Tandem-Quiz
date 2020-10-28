@@ -17,11 +17,11 @@ class TrivaScreenVC: UIViewController {
     @IBOutlet var buttonTwo: UIButton!
     @IBOutlet var buttonThree: UIButton!
     @IBOutlet var buttonFour: UIButton!
+    @IBOutlet var restartButton: UIButton!
     
     var triviaInfo: [Trivia]?
+    
     var currentQuestionIndex: Int = 0
-    var maxQuestionsInOneRound: Int = 11
-    var maxQuesitonsInRoundTwo: Int = 21
     var score: Int = 0
     var triviaProgressStart: Float = 0.0
     
@@ -31,38 +31,35 @@ class TrivaScreenVC: UIViewController {
         updateQuestion()
     }
         
-    @IBAction private func answerPressed(_ sender: UIButton) {
-        
-        if currentQuestionIndex < maxQuestionsInOneRound || currentQuestionIndex < maxQuesitonsInRoundTwo {
-            
-            let question = triviaInfo?[currentQuestionIndex]
-            if sender.titleLabel?.text == question?.correct {
-                score += 1
-                let alert = UIAlertController(title: "Correct!", message: "Way to go!", preferredStyle: .alert)
-                let nextQuestionAction = UIAlertAction(title: "Next", style: .default, handler: nil)
-                alert.addAction(nextQuestionAction)
-                present(alert, animated: true) { self.updateQuestion() }
-            } else {
-                let alert = UIAlertController(title: "Sorry!", message: "The correct answer is: \(question!.correct)", preferredStyle: .alert)
-                let nextQuestionAction = UIAlertAction(title: "Next", style: .default, handler: nil)
-                alert.addAction(nextQuestionAction)
-                present(alert, animated: true) { self.updateQuestion() }
+    // buttonOne thru buttonFour are connected to the following IBAction method
+    @IBAction private func answerButtonPressed(_ sender: UIButton) {
+        let question = triviaInfo?[currentQuestionIndex - 1]
+        if sender.titleLabel?.text == question?.correct {
+            score += 1
+            let alert = UIAlertController(title: "Correct!", message: "Way to go!", preferredStyle: .alert)
+            let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
+                self.updateQuestion()
             }
-            
+            alert.addAction(nextQuestionAction)
+            present(alert, animated: true) { self.score += 1 }
         } else {
-            currentQuestionIndex = 12
+            let alert = UIAlertController(title: "Sorry!", message: "The correct answer is: \(question!.correct).", preferredStyle: .alert)
+            let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
+                self.updateQuestion()
+            }
+            alert.addAction(nextQuestionAction)
+            present(alert, animated: true)
         }
     }
     
-    private func presentEndOfGameAlert() {
-        let alert = UIAlertController(title: "End of Round One", message: "Ready for Round Two?", preferredStyle: .alert)
-        let restartAction = UIAlertAction(title: "Next", style: .default, handler: nil)
-        alert.addAction(restartAction)
-        present(alert, animated: true) {
-            self.currentQuestionIndex = 11
-            self.updateQuestion()
-        }
+    @IBAction func restartButtonPressed(_ sender: UIButton) {
+        score = 0
+        currentQuestionIndex = 0
+        updateQuestion()
+        enableMultipleChoiceButtons()
+        updateUI()
     }
+    
     
     private func loadTriviaDataFromJSON() {
         guard let pathToData = Bundle.main.path(forResource: "Apprentice_TandemFor400_Data", ofType: "json") else {
@@ -87,7 +84,6 @@ class TrivaScreenVC: UIViewController {
             buttonOne.setTitle(shuffledAnswers?[0], for: .normal)
             buttonTwo.setTitle(shuffledAnswers?[1], for: .normal)
             buttonThree.setTitle(shuffledAnswers?[2], for: .normal)
-            buttonFour.isHidden = false
             buttonFour.setTitle(shuffledAnswers?[3], for: .normal)
         } else if shuffledAnswers?.count == 3{
             buttonOne.setTitle(shuffledAnswers?[0], for: .normal)
@@ -101,19 +97,33 @@ class TrivaScreenVC: UIViewController {
             buttonFour.isHidden = false
             buttonFour.setTitle(shuffledAnswers?[3], for: .normal)
         }
-        currentQuestionIndex += 1
-        updateUI()
+        
+        if currentQuestionIndex != 5 { // change to 20
+            currentQuestionIndex += 1
+            updateUI()
+        } else {
+            disableMultupleChoiceButtonsButtons()
+            questionLabel.text = "End of Quiz. You scored \(score) / 5!" // change to XX/20
+        }
     }
     
     private func updateUI() {
         let questionNumber = currentQuestionIndex
-        questionCounterLabel.text? = "\(questionNumber.description) / \(maxQuestionsInOneRound)"
-        triviaProgressBar.progress += 0.2
+        questionCounterLabel.text? = "Question Number: \(questionNumber)"
+        triviaProgressBar.progress = Float(questionNumber) / 5 // change to 20
     }
     
-    private func restartQuiz() {
-        score = 0
-        currentQuestionIndex = 0
-        updateQuestion()
+    private func enableMultipleChoiceButtons() {
+        let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
+        for button in buttons {
+            button?.isHidden = false
+        }
+    }
+    
+    private func disableMultupleChoiceButtonsButtons() {
+        let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
+        for button in buttons {
+            button?.isHidden = true
+        }
     }
 }

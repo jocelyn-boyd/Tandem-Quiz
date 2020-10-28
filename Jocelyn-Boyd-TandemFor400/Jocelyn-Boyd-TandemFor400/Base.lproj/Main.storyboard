@@ -24,12 +24,23 @@
                                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                                         <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-DQ-wAu">
-                                        <rect key="frame" x="8" y="8" width="41.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Number: XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-DQ-wAu">
+                                        <rect key="frame" x="8" y="8" width="165.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-c1-seU">
+                                        <rect key="frame" x="350" y="2" width="56" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Restart">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TsE-7e-vzS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
@@ -74,7 +85,7 @@
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSQ-UA-aut"/>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hof-wI-ncP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
@@ -84,7 +95,7 @@
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bd0-bZ-Iyd"/>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="343-KO-Fmg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
@@ -94,7 +105,7 @@
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emw-8V-2aB"/>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVd-B7-wpq"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
@@ -104,7 +115,7 @@
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-2c-bWo"/>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIf-kG-tax"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -121,6 +132,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1XZ-tZ-z6K" firstAttribute="top" secondItem="ZoD-Jg-Qg7" secondAttribute="top" constant="340" id="AmV-US-tWZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0bp-Kp-gYt" secondAttribute="trailing" id="PZH-m7-bBC"/>
+                                    <constraint firstItem="0bp-Kp-gYt" firstAttribute="top" secondItem="ZoD-Jg-Qg7" secondAttribute="top" id="VbD-c4-RQC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -145,12 +158,13 @@
                         <outlet property="buttonTwo" destination="o4W-zq-8ep" id="CXP-Mc-jI9"/>
                         <outlet property="questionCounterLabel" destination="M3b-DQ-wAu" id="E8H-FH-AET"/>
                         <outlet property="questionLabel" destination="O7q-Qf-RXa" id="BSR-BR-LVK"/>
+                        <outlet property="restartButton" destination="uk6-c1-seU" id="ynV-iM-cdA"/>
                         <outlet property="triviaProgressBar" destination="Mp7-rH-XBl" id="coU-Be-d8B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="84"/>
+            <point key="canvasLocation" x="-586" y="93"/>
         </scene>
     </scenes>
     <resources>
