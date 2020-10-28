@@ -16,6 +16,12 @@ struct Trivia: Codable {
     let incorrect: [String]
     let correct: String
     
+    private func shuffleAnswers() -> [String] {
+        var shuffleAnswers = incorrect
+        shuffleAnswers.append(correct)
+        return shuffleAnswers.shuffled()
+    }
+    
     static func fetchTrivia(from data: Data) throws -> [Trivia] {
         do {
             let trivia = try JSONDecoder().decode([Trivia].self, from: data)
