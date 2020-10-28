@@ -18,7 +18,7 @@ class TrivaScreenVC: UIViewController {
     @IBOutlet var buttonFour: UIButton!
     @IBOutlet var restartButton: UIButton!
     
-    var triviaInfo: [Trivia]?
+    var triviaInfo: [TriviaModel]?
     var currentQuestionIndex: Int = 0
     var score: Int = 0
     var triviaProgressStart: Float = 0.0
@@ -31,7 +31,6 @@ class TrivaScreenVC: UIViewController {
         restartButton.isHidden = true
     }
     
-    // buttonOne thru buttonFour are connected to the following IBAction method
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo?[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question?.correct {
@@ -60,7 +59,6 @@ class TrivaScreenVC: UIViewController {
         updateGameStatusBar()
     }
     
-    
     private func loadTriviaDataFromJSON() {
         guard let pathToData = Bundle.main.path(forResource: "Apprentice_TandemFor400_Data", ofType: "json") else {
             fatalError("Apprentice_TandemFor400_Data.json not found")
@@ -68,7 +66,7 @@ class TrivaScreenVC: UIViewController {
         let interalURL = URL(fileURLWithPath: pathToData)
         do {
             let data = try Data(contentsOf: interalURL)
-            let triviaFromJSON = try Trivia.fetchTrivia(from: data)
+            let triviaFromJSON = try TriviaModel.fetchTrivia(from: data)
             triviaInfo = triviaFromJSON
         } catch {
             print(error)
@@ -107,7 +105,7 @@ class TrivaScreenVC: UIViewController {
             updateGameStatusBar()
         } else {
             restartButton.isHidden = false
-            questionLabel.text = "End of Quiz. You scored \(score) / 5!" // change to XX/20
+            questionLabel.text = "End of Quiz. You scored \(score) / 5 correct!" // change to XX/20
             disableMultupleChoiceButtonsButtons()
         }
     }
@@ -136,9 +134,9 @@ class TrivaScreenVC: UIViewController {
         let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
         for button in buttons {
             button?.layer.cornerRadius = 20
-            button?.backgroundColor = UIColor(red: 239 / 255, green: 71 / 255, blue: 111 / 255, alpha: 1)
+            button?.backgroundColor = UIColor(red: 17 / 255, green: 138 / 255, blue: 178 / 255, alpha: 1)
         }
         restartButton.backgroundColor = .systemRed
-        restartButton.layer.cornerRadius = 20
+        restartButton.layer.cornerRadius = 10
     }
 }

@@ -16,25 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="karla-hernandez-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="CWd-7H-zBT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kelly-sikkema-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="CWd-7H-zBT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tandem For 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vg-MY-7bg">
-                                <rect key="frame" x="44.5" y="362" width="325" height="52"/>
+                                <rect key="frame" x="44.5" y="422" width="325" height="52"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Vg-MY-7bg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="16W-E8-vT5"/>
                             <constraint firstAttribute="bottom" secondItem="CWd-7H-zBT" secondAttribute="bottom" id="DJG-wM-n11"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="TIr-hg-LhN"/>
-                            <constraint firstItem="1Vg-MY-7bg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="318" id="auu-65-s0k"/>
+                            <constraint firstItem="1Vg-MY-7bg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bZz-iw-Mav"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nlo-Rm-hg1"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wvW-Pf-mnV"/>
-                            <constraint firstItem="1Vg-MY-7bg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yrl-7d-EKM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="karla-hernandez-unsplash" width="2179" height="2727"/>
+        <image name="kelly-sikkema-unsplash" width="3000" height="2000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
