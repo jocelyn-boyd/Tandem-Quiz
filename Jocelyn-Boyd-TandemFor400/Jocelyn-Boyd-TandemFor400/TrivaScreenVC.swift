@@ -28,7 +28,6 @@ class TrivaScreenVC: UIViewController {
         loadTriviaDataFromJSON()
         configureButtons()
         showNextQuestion()
-        restartButton.isHidden = true
     }
     
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
