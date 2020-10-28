@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F6E25490846006A0543 /* AppDelegate.swift */; };
+		08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F7025490846006A0543 /* SceneDelegate.swift */; };
+		08DB5F7325490846006A0543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F7225490846006A0543 /* ViewController.swift */; };
+		08DB5F7625490846006A0543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5F7425490846006A0543 /* Main.storyboard */; };
+		08DB5F7825490847006A0543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5F7725490847006A0543 /* Assets.xcassets */; };
+		08DB5F7B25490847006A0543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5F7925490847006A0543 /* LaunchScreen.storyboard */; };
+		08DB5F8625490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F8525490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift */; };
+		08DB5F9125490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F9025490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift */; };
+		08DB5FA22549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
+		08DB5FA32549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08DB5F8225490848006A0543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08DB5F6325490846006A0543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08DB5F6A25490846006A0543;
+			remoteInfo = "Jocelyn-Boyd-TandemFor400";
+		};
+		08DB5F8D25490848006A0543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08DB5F6325490846006A0543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08DB5F6A25490846006A0543;
+			remoteInfo = "Jocelyn-Boyd-TandemFor400";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08DB5F6B25490846006A0543 /* Jocelyn-Boyd-TandemFor400.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jocelyn-Boyd-TandemFor400.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08DB5F6E25490846006A0543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		08DB5F7025490846006A0543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		08DB5F7225490846006A0543 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08DB5F7525490846006A0543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08DB5F7725490847006A0543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08DB5F7A25490847006A0543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		08DB5F7C25490847006A0543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DB5F8125490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jocelyn-Boyd-TandemFor400Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08DB5F8525490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jocelyn_Boyd_TandemFor400Tests.swift; sourceTree = "<group>"; };
+		08DB5F8725490848006A0543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DB5F8C25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jocelyn-Boyd-TandemFor400UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08DB5F9025490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jocelyn_Boyd_TandemFor400UITests.swift; sourceTree = "<group>"; };
+		08DB5F9225490848006A0543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Apprentice_TandemFor400_Data.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08DB5F6825490846006A0543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F7E25490848006A0543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F8925490848006A0543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08DB5F6225490846006A0543 = {
+			isa = PBXGroup;
+			children = (
+				08DB5F6D25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */,
+				08DB5F8425490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests */,
+				08DB5F8F25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests */,
+				08DB5F6C25490846006A0543 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08DB5F6C25490846006A0543 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08DB5F6B25490846006A0543 /* Jocelyn-Boyd-TandemFor400.app */,
+				08DB5F8125490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests.xctest */,
+				08DB5F8C25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08DB5F6D25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */ = {
+			isa = PBXGroup;
+			children = (
+				08DB5F6E25490846006A0543 /* AppDelegate.swift */,
+				08DB5F7025490846006A0543 /* SceneDelegate.swift */,
+				08DB5F7225490846006A0543 /* ViewController.swift */,
+				08DB5F7425490846006A0543 /* Main.storyboard */,
+				08DB5F7725490847006A0543 /* Assets.xcassets */,
+				08DB5F7925490847006A0543 /* LaunchScreen.storyboard */,
+				08DB5F7C25490847006A0543 /* Info.plist */,
+				08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */,
+			);
+			path = "Jocelyn-Boyd-TandemFor400";
+			sourceTree = "<group>";
+		};
+		08DB5F8425490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08DB5F8525490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift */,
+				08DB5F8725490848006A0543 /* Info.plist */,
+			);
+			path = "Jocelyn-Boyd-TandemFor400Tests";
+			sourceTree = "<group>";
+		};
+		08DB5F8F25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests */ = {
+			isa = PBXGroup;
+			children = (
+				08DB5F9025490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift */,
+				08DB5F9225490848006A0543 /* Info.plist */,
+			);
+			path = "Jocelyn-Boyd-TandemFor400UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08DB5F6A25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08DB5F9525490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400" */;
+			buildPhases = (
+				08DB5F6725490846006A0543 /* Sources */,
+				08DB5F6825490846006A0543 /* Frameworks */,
+				08DB5F6925490846006A0543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jocelyn-Boyd-TandemFor400";
+			productName = "Jocelyn-Boyd-TandemFor400";
+			productReference = 08DB5F6B25490846006A0543 /* Jocelyn-Boyd-TandemFor400.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08DB5F8025490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08DB5F9825490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400Tests" */;
+			buildPhases = (
+				08DB5F7D25490848006A0543 /* Sources */,
+				08DB5F7E25490848006A0543 /* Frameworks */,
+				08DB5F7F25490848006A0543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08DB5F8325490848006A0543 /* PBXTargetDependency */,
+			);
+			name = "Jocelyn-Boyd-TandemFor400Tests";
+			productName = "Jocelyn-Boyd-TandemFor400Tests";
+			productReference = 08DB5F8125490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		08DB5F8B25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08DB5F9B25490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400UITests" */;
+			buildPhases = (
+				08DB5F8825490848006A0543 /* Sources */,
+				08DB5F8925490848006A0543 /* Frameworks */,
+				08DB5F8A25490848006A0543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08DB5F8E25490848006A0543 /* PBXTargetDependency */,
+			);
+			name = "Jocelyn-Boyd-TandemFor400UITests";
+			productName = "Jocelyn-Boyd-TandemFor400UITests";
+			productReference = 08DB5F8C25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08DB5F6325490846006A0543 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					08DB5F6A25490846006A0543 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					08DB5F8025490848006A0543 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 08DB5F6A25490846006A0543;
+					};
+					08DB5F8B25490848006A0543 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 08DB5F6A25490846006A0543;
+					};
+				};
+			};
+			buildConfigurationList = 08DB5F6625490846006A0543 /* Build configuration list for PBXProject "Jocelyn-Boyd-TandemFor400" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08DB5F6225490846006A0543;
+			productRefGroup = 08DB5F6C25490846006A0543 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08DB5F6A25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */,
+				08DB5F8025490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests */,
+				08DB5F8B25490848006A0543 /* Jocelyn-Boyd-TandemFor400UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08DB5F6925490846006A0543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB5FA22549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */,
+				08DB5F7B25490847006A0543 /* LaunchScreen.storyboard in Resources */,
+				08DB5F7825490847006A0543 /* Assets.xcassets in Resources */,
+				08DB5F7625490846006A0543 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F7F25490848006A0543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB5FA32549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F8A25490848006A0543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08DB5F6725490846006A0543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB5F7325490846006A0543 /* ViewController.swift in Sources */,
+				08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */,
+				08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F7D25490848006A0543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB5F8625490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08DB5F8825490848006A0543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB5F9125490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08DB5F8325490848006A0543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08DB5F6A25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */;
+			targetProxy = 08DB5F8225490848006A0543 /* PBXContainerItemProxy */;
+		};
+		08DB5F8E25490848006A0543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08DB5F6A25490846006A0543 /* Jocelyn-Boyd-TandemFor400 */;
+			targetProxy = 08DB5F8D25490848006A0543 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		08DB5F7425490846006A0543 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08DB5F7525490846006A0543 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		08DB5F7925490847006A0543 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08DB5F7A25490847006A0543 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		08DB5F9325490848006A0543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		08DB5F9425490848006A0543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08DB5F9625490848006A0543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08DB5F9725490848006A0543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		08DB5F9925490848006A0543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jocelyn-Boyd-TandemFor400.app/Jocelyn-Boyd-TandemFor400";
+			};
+			name = Debug;
+		};
+		08DB5F9A25490848006A0543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jocelyn-Boyd-TandemFor400.app/Jocelyn-Boyd-TandemFor400";
+			};
+			name = Release;
+		};
+		08DB5F9C25490848006A0543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jocelyn-Boyd-TandemFor400";
+			};
+			name = Debug;
+		};
+		08DB5F9D25490848006A0543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 453FAV4WWW;
+				INFOPLIST_FILE = "Jocelyn-Boyd-TandemFor400UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jocelyn-boyd.Jocelyn-Boyd-TandemFor400UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jocelyn-Boyd-TandemFor400";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08DB5F6625490846006A0543 /* Build configuration list for PBXProject "Jocelyn-Boyd-TandemFor400" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08DB5F9325490848006A0543 /* Debug */,
+				08DB5F9425490848006A0543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08DB5F9525490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08DB5F9625490848006A0543 /* Debug */,
+				08DB5F9725490848006A0543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08DB5F9825490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08DB5F9925490848006A0543 /* Debug */,
+				08DB5F9A25490848006A0543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08DB5F9B25490848006A0543 /* Build configuration list for PBXNativeTarget "Jocelyn-Boyd-TandemFor400UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08DB5F9C25490848006A0543 /* Debug */,
+				08DB5F9D25490848006A0543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08DB5F6325490846006A0543 /* Project object */;
+}
