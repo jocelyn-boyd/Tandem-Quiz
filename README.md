@@ -23,7 +23,6 @@ The goal is to create an application that displays trivia questions whith multip
 - A user can see the score they recieved at the end of the round
 
 ## Screenshots
-![image](images/Trivia-Screen.png)
 
 ## How to Run the Game
 - Clone the project
