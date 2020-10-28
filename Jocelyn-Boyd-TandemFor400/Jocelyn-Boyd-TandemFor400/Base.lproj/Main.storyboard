@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jocelyn_Boyd_TandemFor400" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-hN-Gsq" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfO-dB-gzt">
+                                        <rect key="frame" x="8" y="14" width="45.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-rH-XBl">
+                                        <rect key="frame" x="8" y="42.5" width="398" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                        <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzR-O1-4GZ">
+                                        <rect key="frame" x="321.5" y="14" width="84.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstItem="JfO-dB-gzt" firstAttribute="baseline" secondItem="KzR-O1-4GZ" secondAttribute="baseline" id="AbU-Rm-Y7i"/>
+                                    <constraint firstItem="JfO-dB-gzt" firstAttribute="leading" secondItem="Mp7-rH-XBl" secondAttribute="leading" id="Adh-eV-URX"/>
+                                    <constraint firstAttribute="height" constant="60" id="BI8-hZ-28N"/>
+                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="top" secondItem="JfO-dB-gzt" secondAttribute="bottom" constant="8" symbolic="YES" id="F6U-PM-qtR"/>
+                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="KzR-O1-4GZ" secondAttribute="trailing" id="M8V-Vt-mZV"/>
+                                    <constraint firstItem="JfO-dB-gzt" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leadingMargin" id="VuQ-QB-Vp2"/>
+                                    <constraint firstItem="JfO-dB-gzt" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="14" id="uPt-DE-r2u"/>
+                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="LGf-hN-Gsq" secondAttribute="trailingMargin" id="vvK-38-tyB"/>
+                                    <constraint firstItem="KzR-O1-4GZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JfO-dB-gzt" secondAttribute="trailing" constant="8" symbolic="YES" id="xlB-aL-J3j"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-Jg-Qg7">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Kp-gYt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was Tandem previous name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7q-Qf-RXa">
+                                                <rect key="frame" x="75" y="160" width="264" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="O7q-Qf-RXa" firstAttribute="centerY" secondItem="0bp-Kp-gYt" secondAttribute="centerY" id="6NH-4J-eAy"/>
+                                            <constraint firstItem="O7q-Qf-RXa" firstAttribute="centerX" secondItem="0bp-Kp-gYt" secondAttribute="centerX" id="eZq-9x-Kt7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-tZ-z6K">
+                                        <rect key="frame" x="0.0" y="340" width="414" height="418"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-eQ-b3e">
+                                                <rect key="frame" x="8" y="7.5" width="398" height="395.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-bg-TYT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="84"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="398" id="sYY-oK-9HZ"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Tandem">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
+                                                        <rect key="frame" x="0.0" y="104" width="398" height="84"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Burger Shack">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
+                                                        <rect key="frame" x="0.0" y="208" width="398" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Extraordinary Humans">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
+                                                        <rect key="frame" x="0.0" y="311.5" width="398" height="84"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Devmynd">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="KIF-eQ-b3e" firstAttribute="leading" secondItem="1XZ-tZ-z6K" secondAttribute="leading" constant="8" id="7a4-bb-xuP"/>
+                                            <constraint firstAttribute="bottom" secondItem="KIF-eQ-b3e" secondAttribute="bottom" constant="15" id="8ca-s6-Ldp"/>
+                                            <constraint firstAttribute="trailing" secondItem="KIF-eQ-b3e" secondAttribute="trailing" constant="8" id="cZg-mc-1oK"/>
+                                            <constraint firstItem="KIF-eQ-b3e" firstAttribute="top" secondItem="1XZ-tZ-z6K" secondAttribute="top" constant="7.5" id="taK-Ja-0cR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1XZ-tZ-z6K" firstAttribute="top" secondItem="ZoD-Jg-Qg7" secondAttribute="top" constant="340" id="AmV-US-tWZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZoD-Jg-Qg7" secondAttribute="bottom" id="1oS-nX-76p"/>
+                            <constraint firstItem="LGf-hN-Gsq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EA5-eb-gmD"/>
+                            <constraint firstItem="1XZ-tZ-z6K" firstAttribute="width" secondItem="LGf-hN-Gsq" secondAttribute="width" id="Ltx-cJ-2da"/>
+                            <constraint firstItem="LGf-hN-Gsq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PEI-3j-L63"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZoD-Jg-Qg7" secondAttribute="trailing" id="Usj-hP-SRj"/>
+                            <constraint firstItem="ZoD-Jg-Qg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WKj-QN-hi9"/>
+                            <constraint firstItem="ZoD-Jg-Qg7" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="bottom" id="cbu-oa-ohf"/>
+                            <constraint firstItem="LGf-hN-Gsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kL1-jU-KSR"/>
+                            <constraint firstItem="LGf-hN-Gsq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qO4-gc-iWM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="optionFour" destination="8qV-24-p3d" id="2M6-ui-uVA"/>
+                        <outlet property="optionOne" destination="X3x-bg-TYT" id="LpN-Y8-zgO"/>
+                        <outlet property="optionThree" destination="OSm-c7-Ysy" id="Ksf-Hd-U7J"/>
+                        <outlet property="optionTwo" destination="o4W-zq-8ep" id="B56-gE-Geh"/>
+                        <outlet property="questionLabel" destination="O7q-Qf-RXa" id="BSR-BR-LVK"/>
+                        <outlet property="triviaProgressBar" destination="Mp7-rH-XBl" id="coU-Be-d8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
