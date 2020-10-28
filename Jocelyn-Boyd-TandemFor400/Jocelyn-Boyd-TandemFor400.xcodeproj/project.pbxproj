@@ -17,6 +17,9 @@
 		08DB5F9125490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F9025490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift */; };
 		08DB5FA22549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
 		08DB5FA32549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
+		08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */; };
+		08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
+		08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		08DB5F9025490848006A0543 /* Jocelyn_Boyd_TandemFor400UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jocelyn_Boyd_TandemFor400UITests.swift; sourceTree = "<group>"; };
 		08DB5F9225490848006A0543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Apprentice_TandemFor400_Data.json; sourceTree = "<group>"; };
+		08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaJSONModelTest.swift; sourceTree = "<group>"; };
+		08DB5FAF25490AE2006A0543 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 				08DB5F7925490847006A0543 /* LaunchScreen.storyboard */,
 				08DB5F7C25490847006A0543 /* Info.plist */,
 				08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */,
+				08DB5FAF25490AE2006A0543 /* Trivia.swift */,
 			);
 			path = "Jocelyn-Boyd-TandemFor400";
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 		08DB5F8425490848006A0543 /* Jocelyn-Boyd-TandemFor400Tests */ = {
 			isa = PBXGroup;
 			children = (
+				08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */,
 				08DB5F8525490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift */,
 				08DB5F8725490848006A0543 /* Info.plist */,
 			);
@@ -266,6 +273,7 @@
 			files = (
 				08DB5F7325490846006A0543 /* ViewController.swift in Sources */,
 				08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */,
+				08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */,
 				08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */,
+				08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */,
 				08DB5F8625490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
