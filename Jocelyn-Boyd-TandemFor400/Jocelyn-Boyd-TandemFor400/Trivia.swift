@@ -16,9 +16,9 @@ struct Trivia: Codable {
     let incorrect: [String]
     let correct: String
     
-    static func fetchTrivia(from data: Data) throws -> Trivia {
+    static func fetchTrivia(from data: Data) throws -> [Trivia] {
         do {
-            let trivia = try JSONDecoder().decode(Trivia.self, from: data)
+            let trivia = try JSONDecoder().decode([Trivia].self, from: data)
             return trivia
         } catch {
             throw JSONError.decodingError(error)
