@@ -17,8 +17,8 @@
 		08DB5FA22549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
 		08DB5FA32549086E006A0543 /* Apprentice_TandemFor400_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */; };
 		08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */; };
-		08DB5FB025490AE2006A0543 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* TriviaModel.swift */; };
-		08DB5FB125490AE2006A0543 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* TriviaModel.swift */; };
+		08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
+		08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
 		08DB5FB92549193D006A0543 /* TrivaScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */; };
 		08DB5FBA2549193D006A0543 /* TrivaScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		08DB5F9225490848006A0543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Apprentice_TandemFor400_Data.json; sourceTree = "<group>"; };
 		08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaJSONModelTest.swift; sourceTree = "<group>"; };
-		08DB5FAF25490AE2006A0543 /* TriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
+		08DB5FAF25490AE2006A0543 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrivaScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 				08DB5FD4254A31FA006A0543 /* Supporting-Files */,
 				08DB5F7C25490847006A0543 /* Info.plist */,
 				08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */,
-				08DB5FAF25490AE2006A0543 /* TriviaModel.swift */,
+				08DB5FAF25490AE2006A0543 /* Trivia.swift */,
 				08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */,
 			);
 			path = "Jocelyn-Boyd-TandemFor400";
@@ -282,7 +282,7 @@
 			files = (
 				08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */,
 				08DB5FB92549193D006A0543 /* TrivaScreenVC.swift in Sources */,
-				08DB5FB025490AE2006A0543 /* TriviaModel.swift in Sources */,
+				08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */,
 				08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +293,7 @@
 			files = (
 				08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */,
 				08DB5FBA2549193D006A0543 /* TrivaScreenVC.swift in Sources */,
-				08DB5FB125490AE2006A0543 /* TriviaModel.swift in Sources */,
+				08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */,
 				08DB5F8625490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

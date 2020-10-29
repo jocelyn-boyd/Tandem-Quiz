@@ -27,7 +27,7 @@ class TriviaJSONModelTest: XCTestCase {
     func testLoadTriviaData() {
         let triviaData = getTriviaFromJSONData()
         do {
-            _ = try TriviaModel.fetchTrivia(from: triviaData)
+            _ = try Trivia.fetchTrivia(from: triviaData)
         } catch {
             print(error)
         }
