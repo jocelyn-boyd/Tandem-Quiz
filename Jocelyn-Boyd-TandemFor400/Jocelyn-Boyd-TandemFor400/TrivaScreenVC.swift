@@ -24,15 +24,14 @@ class TrivaScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTriviaDataFromJSON()
         configureButtons()
+        loadTriviaDataFromJSON()
         setQuestion()
     }
     
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo?[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question?.correct {
-            score += 1
             let alert = UIAlertController(title: "Correct!", message: "Way to go!", preferredStyle: .alert)
             let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
                 self.setQuestion()

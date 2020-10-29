@@ -22,11 +22,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Kp-gYt">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-c1-seU">
-                                                <rect key="frame" x="170" y="229" width="74" height="41"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-c1-seU">
+                                                <rect key="frame" x="123" y="229" width="169" height="41"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <state key="normal" title="Restart">
+                                                <state key="normal" title="Play New Round">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -43,7 +43,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="uk6-c1-seU" secondAttribute="bottom" constant="70" id="4N9-No-Ekw"/>
-                                            <constraint firstAttribute="trailing" secondItem="uk6-c1-seU" secondAttribute="trailing" constant="170" id="Eo9-3B-7WS"/>
+                                            <constraint firstAttribute="trailing" secondItem="uk6-c1-seU" secondAttribute="trailing" constant="122" id="Eo9-3B-7WS"/>
                                             <constraint firstItem="uk6-c1-seU" firstAttribute="centerX" secondItem="0bp-Kp-gYt" secondAttribute="centerX" id="IH2-dG-obp"/>
                                             <constraint firstAttribute="trailing" secondItem="O7q-Qf-RXa" secondAttribute="trailing" constant="30" id="NkB-R8-0r5"/>
                                             <constraint firstItem="O7q-Qf-RXa" firstAttribute="centerY" secondItem="0bp-Kp-gYt" secondAttribute="centerY" id="XBc-bU-zaW"/>
