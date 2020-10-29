@@ -17,7 +17,7 @@ The goal is to create an application that displays trivia questions whith multip
 ## Acceptance Criteria
 - A use can view the questions
 - Questions with their muitlple choice options must be displayed one at a time
-- Questions should not repeat around
+- Questions should not repeat in a round
 - A user can select 1 answer out of the 4 possible answers
 - The correct answer must be revealed after a user has submitted their answer
 - A user can see the score they recieved at the end of the round
