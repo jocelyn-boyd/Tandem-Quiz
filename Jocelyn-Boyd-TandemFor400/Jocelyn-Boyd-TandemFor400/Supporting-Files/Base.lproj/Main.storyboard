@@ -56,7 +56,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-eQ-b3e">
                                                 <rect key="frame" x="8" y="7.5" width="398" height="395.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-bg-TYT">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-bg-TYT">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
@@ -67,7 +67,7 @@
                                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hof-wI-ncP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
                                                         <rect key="frame" x="0.0" y="104" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
@@ -78,7 +78,7 @@
                                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="343-KO-Fmg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
                                                         <rect key="frame" x="0.0" y="208" width="398" height="83.5"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
@@ -89,7 +89,7 @@
                                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVd-B7-wpq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
                                                         <rect key="frame" x="0.0" y="311.5" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
@@ -132,12 +132,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1 / 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-r9-sYT">
-                                        <rect key="frame" x="8" y="17" width="96.5" height="21"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.023529411764705882" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,9 +139,7 @@
                                     <constraint firstAttribute="trailing" secondItem="M3b-DQ-wAu" secondAttribute="trailing" constant="8" id="0Fe-MV-wbx"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leadingMargin" id="7mw-sw-JmF"/>
                                     <constraint firstAttribute="height" constant="60" id="BI8-hZ-28N"/>
-                                    <constraint firstItem="wtH-r9-sYT" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="17" id="F7h-2X-HAj"/>
                                     <constraint firstAttribute="bottom" secondItem="Mp7-rH-XBl" secondAttribute="bottom" constant="13.5" id="aLK-lQ-M2M"/>
-                                    <constraint firstItem="wtH-r9-sYT" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="8" id="gZ7-tA-lsB"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="LGf-hN-Gsq" secondAttribute="trailingMargin" id="vvK-38-tyB"/>
                                     <constraint firstItem="M3b-DQ-wAu" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="16.5" id="x7H-fa-K2f"/>
                                 </constraints>

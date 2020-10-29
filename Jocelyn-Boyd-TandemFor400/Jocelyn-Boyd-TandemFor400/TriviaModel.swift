@@ -16,10 +16,17 @@ struct TriviaModel: Codable {
     let incorrect: [String]
     let correct: String
     
-    func shuffledAnswers() -> [String] {
-        var shuffleAnswers = incorrect
-        shuffleAnswers.append(correct)
-        return shuffleAnswers.shuffled()
+//    func shuffleQuestions() -> [String] {
+//
+//    }
+    
+    func fetchPossibleAnswers() -> [String] {
+//        var shuffleAnswers = incorrect
+//        shuffleAnswers.append(correct)
+//        return shuffleAnswers.shuffled()
+        var answers = incorrect
+        answers.append(correct)
+        return answers
     }
     
     static func fetchTrivia(from data: Data) throws -> [TriviaModel] {
