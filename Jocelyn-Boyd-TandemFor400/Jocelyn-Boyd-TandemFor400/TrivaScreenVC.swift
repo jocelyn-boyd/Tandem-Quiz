@@ -29,11 +29,6 @@ class TrivaScreenVC: UIViewController {
         setQuestion()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        loadTriviaDataFromJSON()
-    }
-    
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo?[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question?.correct {
