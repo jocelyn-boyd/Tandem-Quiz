@@ -31,8 +31,12 @@
                         <constraints>
                             <constraint firstItem="1Vg-MY-7bg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="16W-E8-vT5"/>
                             <constraint firstAttribute="bottom" secondItem="CWd-7H-zBT" secondAttribute="bottom" id="DJG-wM-n11"/>
+                            <constraint firstItem="CWd-7H-zBT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ef6-S0-5V1"/>
+                            <constraint firstItem="CWd-7H-zBT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PCp-ET-p8s"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="TIr-hg-LhN"/>
                             <constraint firstItem="1Vg-MY-7bg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bZz-iw-Mav"/>
+                            <constraint firstItem="CWd-7H-zBT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fUX-QE-k8D"/>
+                            <constraint firstAttribute="bottom" secondItem="CWd-7H-zBT" secondAttribute="bottom" id="i4l-GN-yAb"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nlo-Rm-hg1"/>
                             <constraint firstItem="CWd-7H-zBT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wvW-Pf-mnV"/>
                         </constraints>
