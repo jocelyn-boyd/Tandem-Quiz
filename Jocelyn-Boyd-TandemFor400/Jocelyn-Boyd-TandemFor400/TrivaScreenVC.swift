@@ -4,7 +4,6 @@
 //
 //  Created by Jocelyn Boyd on 10/27/20.
 //
-
 import UIKit
 
 class TrivaScreenVC: UIViewController {
@@ -66,7 +65,7 @@ class TrivaScreenVC: UIViewController {
         do {
             let data = try Data(contentsOf: interalURL)
             let triviaFromJSON = try TriviaModel.fetchTrivia(from: data)
-            triviaInfo = triviaFromJSON
+            triviaInfo = triviaFromJSON.shuffled()
         } catch {
             print(error)
         }
@@ -77,12 +76,13 @@ class TrivaScreenVC: UIViewController {
         let question = triviaInfo?[currentQuestionIndex]
         questionLabel.text = question?.question
         
-        let shuffledAnswers = question?.shuffledAnswers()
+        let shuffledAnswers = question?.fetchPossibleAnswers()
         if shuffledAnswers?.count == 4 {
             buttonOne.setTitle(shuffledAnswers?[0], for: .normal)
             buttonTwo.setTitle(shuffledAnswers?[1], for: .normal)
             buttonThree.setTitle(shuffledAnswers?[2], for: .normal)
             buttonFour.setTitle(shuffledAnswers?[3], for: .normal)
+            buttonFour.isHidden = false
         } else if shuffledAnswers?.count == 3{
             buttonOne.setTitle(shuffledAnswers?[0], for: .normal)
             buttonTwo.setTitle(shuffledAnswers?[1], for: .normal)
@@ -99,20 +99,20 @@ class TrivaScreenVC: UIViewController {
     }
     
     private func updateTriviaScreen() {
-        if currentQuestionIndex != 5 { // change to 20
+        if currentQuestionIndex != 10 {
             currentQuestionIndex += 1
             updateGameStatusBar()
         } else {
             restartButton.isHidden = false
-            questionLabel.text = "You scored \(score) / 5 correct!" // change to XX/20
+            questionLabel.text = "You scored \(score) / 10 correct!"
             disableMultupleChoiceButtonsButtons()
         }
     }
     
     private func updateGameStatusBar() {
         let questionNumber = currentQuestionIndex
-        questionCounterLabel.text? = "\(questionNumber)/5 Questions"
-        triviaProgressBar.progress = Float(questionNumber) / 5 // change to 20
+        questionCounterLabel.text? = "\(questionNumber) / 10 Questions"
+        triviaProgressBar.progress = Float(questionNumber) / 10
     }
     
     private func enableMultipleChoiceButtons() {
