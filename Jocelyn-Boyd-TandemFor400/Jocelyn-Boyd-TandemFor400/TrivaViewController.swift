@@ -60,16 +60,13 @@ class TrivaViewController: UIViewController {
     
     // MARK: - Private Methods
     private func loadTriviaDataFromJSON() {
-        // TODO: Move method to Network Manager class
-        guard let pathToData = Bundle.main.path(forResource: "Apprentice_TandemFor400_Data", ofType: "json") else {
-            fatalError("Apprentice_TandemFor400_Data.json not found")
-        }
-        let interalURL = URL(fileURLWithPath: pathToData)
-        do {
-            let data = try Data(contentsOf: interalURL)
-            triviaInfo = try Trivia.loadTriviaFromJSON(from: data).shuffled()
-        } catch {
-            fatalError("Failed to get data.")
+        TriviaNetworkManager.manager.loadTriviaDataFromBundle { (result) in
+            switch result {
+            case let .success(trivia):
+                self.triviaInfo = trivia
+            case let .failure(error):
+                print(error)
+            }
         }
     }
     
