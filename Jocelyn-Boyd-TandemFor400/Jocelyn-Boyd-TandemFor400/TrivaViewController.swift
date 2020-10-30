@@ -36,6 +36,7 @@ class TrivaViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
+        // TODO: Remove the alert and change the color of the buttons to reflect if the selected answer was correct or incorrect, refresh the view with a new questions after a couple of sections
         let question = triviaInfo[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question.correctAnswer {
             showAlert(title: "Correct", message: "Way to go!") {
@@ -60,7 +61,7 @@ class TrivaViewController: UIViewController {
     
     // MARK: - Private Methods
     private func loadTriviaDataFromJSON() {
-        TriviaNetworkManager.manager.loadTriviaDataFromBundle { (result) in
+        TriviaBundleFetcher.manager.loadTriviaDataFromBundle { (result) in
             switch result {
             case let .success(trivia):
                 self.triviaInfo = trivia
@@ -121,6 +122,7 @@ class TrivaViewController: UIViewController {
         let questionNumber = currentQuestionIndex
         questionCounterLabel.text? = "\(questionNumber) / 10 Questions"
         triviaProgressBar.progress = Float(questionNumber) / 10
+        // TODO: Alternate colors on progress bar -> green for correctly and red incorrectly
     }
     
     private func enableDisableAnswerButtons(isEnabled: Bool) {
