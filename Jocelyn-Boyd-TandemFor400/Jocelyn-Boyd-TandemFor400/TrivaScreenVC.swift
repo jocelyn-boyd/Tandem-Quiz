@@ -8,6 +8,7 @@ import UIKit
 
 class TrivaScreenVC: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet private var triviaProgressBar: UIProgressView!
     @IBOutlet private var questionLabel: UILabel!
     @IBOutlet private var questionCounterLabel: UILabel!
@@ -17,12 +18,14 @@ class TrivaScreenVC: UIViewController {
     @IBOutlet private var buttonFour: UIButton!
     @IBOutlet private var restartButton: UIButton!
     
+    // MARK: - Properties
     private var buttons = [UIButton]()
     private var triviaInfo = [Trivia]()
     private var currentQuestionIndex: Int = 0
     private var score: Int = 0
     private var triviaProgressStart: Float = 0.0
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
@@ -30,6 +33,7 @@ class TrivaScreenVC: UIViewController {
         loadNewQuestion()
     }
     
+    // MARK: - Actions
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question.correctAnswer {
@@ -47,20 +51,22 @@ class TrivaScreenVC: UIViewController {
     @IBAction private func restartButtonPressed(_ sender: UIButton) {
         score = 0
         currentQuestionIndex = 0
+        loadTriviaDataFromJSON()
         loadNewQuestion()
-        enableMultipleChoiceButtons()
-        updateGameStatusBar()
+        enableDisableAnswerButtons(isEnabled: true)
+        updateProgressBar()
     }
     
+    // MARK: - Private Methods
     private func loadTriviaDataFromJSON() {
+        // TODO: Move method to Network Manager class
         guard let pathToData = Bundle.main.path(forResource: "Apprentice_TandemFor400_Data", ofType: "json") else {
             fatalError("Apprentice_TandemFor400_Data.json not found")
         }
         let interalURL = URL(fileURLWithPath: pathToData)
         do {
             let data = try Data(contentsOf: interalURL)
-            let triviaFromJSON = try Trivia.fetchTrivia(from: data)
-            triviaInfo = triviaFromJSON.shuffled()
+            triviaInfo = try Trivia.loadTriviaFromJSON(from: data).shuffled()
         } catch {
             fatalError("Failed to get data.")
         }
@@ -72,45 +78,57 @@ class TrivaScreenVC: UIViewController {
         questionLabel.text = question.question
         
         let shuffledAnswers = question.fetchPossibleAnswers()
-        buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
-        buttons.forEach {$0.isHidden = true}
-        
-        for (index, answer) in shuffledAnswers.enumerated() {
-            buttons[index].isHidden = false
-            buttons[index].setTitle(answer, for: .normal)
+        switch shuffledAnswers.count {
+        case 4:
+            for (index, answer) in shuffledAnswers.enumerated() {
+                buttons[index].isHidden = false
+                buttons[index].setTitle(answer, for: .normal)
+            }
+        case 3:
+            for (index, answer) in shuffledAnswers.enumerated() {
+                buttonFour.isHidden = true
+                buttons[index].setTitle(answer, for: .normal)
+            }
+        default:
+            buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
+            buttons.forEach {$0.isHidden = true}
         }
         updateTriviaScreen()
     }
     
-    private func updateTriviaScreen() {
-        if currentQuestionIndex != 10 {
-            currentQuestionIndex += 1
-            updateGameStatusBar()
-        } else {
+    private func updateTriviaScreen() {        
+        switch currentQuestionIndex {
+        case 10:
             restartButton.isHidden = false
-            questionLabel.text = "You scored \(score) / 10 correct!"
-            disableMultupleChoiceButtonsButtons()
+            updateScore()
+            enableDisableAnswerButtons(isEnabled: false)
+        default:
+            currentQuestionIndex += 1
+            updateProgressBar()
         }
     }
     
-    private func updateGameStatusBar() {
+    private func updateScore() {
+        switch score {
+        case 10:
+            questionLabel.text = "A perfect 10!"
+        case 5...9:
+            questionLabel.text = "Pretty Good! You scored \(score) / 10 correct"
+        default:
+            questionLabel.text = "You almost had it. You scored \(score) / 10 correct!"
+        }
+    }
+    
+    private func updateProgressBar() {
         let questionNumber = currentQuestionIndex
         questionCounterLabel.text? = "\(questionNumber) / 10 Questions"
         triviaProgressBar.progress = Float(questionNumber) / 10
     }
     
-    private func enableMultipleChoiceButtons() {
+    private func enableDisableAnswerButtons(isEnabled: Bool) {
         let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour].compactMap { $0 }
         for button in buttons {
-            button.isHidden = false
-        }
-        self.buttons = buttons
-    }
-    
-    private func disableMultupleChoiceButtonsButtons() {
-        let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour].compactMap { $0 }
-        for button in buttons {
-            button.isHidden = true
+            button.isHidden = isEnabled ? false : true
         }
         self.buttons = buttons
     }
@@ -124,16 +142,5 @@ class TrivaScreenVC: UIViewController {
         self.buttons = buttons
         restartButton.backgroundColor = .systemRed
         restartButton.layer.cornerRadius = 10
-    }
-}
-
-extension UIViewController {
-    func showAlert(title: String?, message: String?, action: (() -> ())?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { (_) in
-            action?()
-        }
-        alert.addAction(nextQuestionAction)
-        present(alert, animated: true)
     }
 }

@@ -28,7 +28,7 @@ struct Trivia: Codable {
         return shuffleAnswers.shuffled()
     }
     
-    static func fetchTrivia(from data: Data) throws -> [Trivia] {
+    static func loadTriviaFromJSON(from data: Data) throws -> [Trivia] {
         do {
             let trivia = try JSONDecoder().decode([Trivia].self, from: data)
             return trivia
