@@ -21,8 +21,8 @@
 		08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */; };
 		08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
 		08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FAF25490AE2006A0543 /* Trivia.swift */; };
-		08DB5FB92549193D006A0543 /* TrivaScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */; };
-		08DB5FBA2549193D006A0543 /* TrivaScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */; };
+		08DB5FB92549193D006A0543 /* TrivaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaViewController.swift */; };
+		08DB5FBA2549193D006A0543 /* TrivaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5FB82549193D006A0543 /* TrivaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Apprentice_TandemFor400_Data.json; sourceTree = "<group>"; };
 		08DB5FAA25490942006A0543 /* TriviaJSONModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaJSONModelTest.swift; sourceTree = "<group>"; };
 		08DB5FAF25490AE2006A0543 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
-		08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrivaScreenVC.swift; sourceTree = "<group>"; };
+		08DB5FB82549193D006A0543 /* TrivaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrivaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				08DB5F7C25490847006A0543 /* Info.plist */,
 				08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */,
 				08DB5FAF25490AE2006A0543 /* Trivia.swift */,
-				08DB5FB82549193D006A0543 /* TrivaScreenVC.swift */,
+				08DB5FB82549193D006A0543 /* TrivaViewController.swift */,
 				088975A1254B861B00E9A469 /* TriviaNetworkManager.swift */,
 				088975AA254BBE2400E9A469 /* UIViewController+Ext.swift */,
 			);
@@ -287,7 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */,
-				08DB5FB92549193D006A0543 /* TrivaScreenVC.swift in Sources */,
+				08DB5FB92549193D006A0543 /* TrivaViewController.swift in Sources */,
 				088975AB254BBE2400E9A469 /* UIViewController+Ext.swift in Sources */,
 				088975A2254B861B00E9A469 /* TriviaNetworkManager.swift in Sources */,
 				08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */,
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DB5FAB25490942006A0543 /* TriviaJSONModelTest.swift in Sources */,
-				08DB5FBA2549193D006A0543 /* TrivaScreenVC.swift in Sources */,
+				08DB5FBA2549193D006A0543 /* TrivaViewController.swift in Sources */,
 				08DB5FB125490AE2006A0543 /* Trivia.swift in Sources */,
 				08DB5F8625490848006A0543 /* Jocelyn_Boyd_TandemFor400Tests.swift in Sources */,
 			);

@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class TrivaScreenVC: UIViewController {
+class TrivaViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private var triviaProgressBar: UIProgressView!
