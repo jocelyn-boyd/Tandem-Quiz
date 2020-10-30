@@ -9,6 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="TqX-CK-zid">
+            <objects>
+                <viewController id="Lu3-hc-N0P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33j-E8-mUe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameplay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPD-RC-vAP">
+                                <rect key="frame" x="105" y="100" width="204" height="47"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A round of trivia has 10 questions  All questions are multiple choice   Have fun! :] " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-to-xia">
+                                <rect key="frame" x="44.5" y="363" width="325" height="116"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K7n-Hf-TYw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m9F-to-xia" firstAttribute="centerX" secondItem="33j-E8-mUe" secondAttribute="centerX" id="72I-5J-iuI"/>
+                            <constraint firstItem="K7n-Hf-TYw" firstAttribute="trailing" secondItem="fPD-RC-vAP" secondAttribute="trailing" constant="105" id="JC1-D9-PoN"/>
+                            <constraint firstItem="fPD-RC-vAP" firstAttribute="top" secondItem="K7n-Hf-TYw" secondAttribute="top" constant="100" id="qxQ-oG-UEo"/>
+                            <constraint firstItem="m9F-to-xia" firstAttribute="centerY" secondItem="33j-E8-mUe" secondAttribute="centerY" id="v7T-1a-Vzl"/>
+                            <constraint firstItem="fPD-RC-vAP" firstAttribute="leading" secondItem="K7n-Hf-TYw" secondAttribute="leading" constant="105" id="w6M-gO-Y8U"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eL-s5-Yod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="366"/>
+        </scene>
         <!--Triva View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -127,8 +163,22 @@
                                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                                         <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-sV-sj5">
+                                        <rect key="frame" x="8" y="8" width="100" height="29.5"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="eco-rA-9ZR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Gameplay">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Lu3-hc-N0P" kind="presentation" id="66r-JD-76t"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX/10 Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-DQ-wAu">
-                                        <rect key="frame" x="264.5" y="16.5" width="141.5" height="21"/>
+                                        <rect key="frame" x="264.5" y="8" width="141.5" height="21"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -137,13 +187,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.023529411764705882" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="M3b-DQ-wAu" secondAttribute="trailing" constant="8" id="0Fe-MV-wbx"/>
+                                    <constraint firstItem="Zxv-sV-sj5" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="8" id="3Q8-hQ-n3r"/>
+                                    <constraint firstItem="Mp7-rH-XBl" firstAttribute="top" secondItem="Zxv-sV-sj5" secondAttribute="bottom" constant="5" id="5MU-Sk-Gbe"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leadingMargin" id="7mw-sw-JmF"/>
                                     <constraint firstAttribute="height" constant="60" id="BI8-hZ-28N"/>
+                                    <constraint firstAttribute="trailing" secondItem="M3b-DQ-wAu" secondAttribute="trailing" constant="8" id="SUH-3J-vGu"/>
+                                    <constraint firstItem="Zxv-sV-sj5" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="8" id="Xtc-8Q-RXF"/>
                                     <constraint firstAttribute="bottom" secondItem="Mp7-rH-XBl" secondAttribute="bottom" constant="13.5" id="aLK-lQ-M2M"/>
-                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="20" symbolic="YES" id="mCe-mu-cDS"/>
+                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zxv-sV-sj5" secondAttribute="trailing" constant="8" symbolic="YES" id="jZ2-eM-cp9"/>
+                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="8" id="r64-hC-lhz"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="LGf-hN-Gsq" secondAttribute="trailingMargin" id="vvK-38-tyB"/>
-                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="16.5" id="x7H-fa-K2f"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -166,6 +219,7 @@
                         <outlet property="buttonOne" destination="X3x-bg-TYT" id="xcG-sz-Zet"/>
                         <outlet property="buttonThree" destination="OSm-c7-Ysy" id="FD0-Rv-fye"/>
                         <outlet property="buttonTwo" destination="o4W-zq-8ep" id="CXP-Mc-jI9"/>
+                        <outlet property="gameplayButton" destination="Zxv-sV-sj5" id="9QE-0y-jbL"/>
                         <outlet property="questionCounterLabel" destination="M3b-DQ-wAu" id="E8H-FH-AET"/>
                         <outlet property="questionLabel" destination="O7q-Qf-RXa" id="BSR-BR-LVK"/>
                         <outlet property="restartButton" destination="uk6-c1-seU" id="ynV-iM-cdA"/>
@@ -174,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="72"/>
+            <point key="canvasLocation" x="1539.1304347826087" y="-352.23214285714283"/>
         </scene>
     </scenes>
     <resources>

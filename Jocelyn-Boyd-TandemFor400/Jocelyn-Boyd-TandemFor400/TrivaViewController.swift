@@ -17,6 +17,7 @@ class TrivaViewController: UIViewController {
     @IBOutlet private var buttonThree: UIButton!
     @IBOutlet private var buttonFour: UIButton!
     @IBOutlet private var restartButton: UIButton!
+    @IBOutlet var gameplayButton: UIButton!
     
     // MARK: - Properties
     private var buttons = [UIButton]()
@@ -37,12 +38,12 @@ class TrivaViewController: UIViewController {
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
         let question = triviaInfo[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question.correctAnswer {
-            showAlert(title: "Correct!", message: "Way to go!") {
+            showAlert(title: "Correct", message: "Way to go!") {
                 self.loadNewQuestion()
                 self.score += 1
             }
         } else {
-            showAlert(title: "Sorry", message: "The correct answer is: \(question.correctAnswer)") {
+            showAlert(title: "Try Again", message: "The correct answer is: \(question.correctAnswer)") {
                 self.loadNewQuestion()
             }
         }
@@ -142,5 +143,7 @@ class TrivaViewController: UIViewController {
         self.buttons = buttons
         restartButton.backgroundColor = .systemRed
         restartButton.layer.cornerRadius = 10
+        gameplayButton.layer.cornerRadius = 10
+        gameplayButton.backgroundColor = UIColor(red: 239/255, green: 71/255, blue: 111/255, alpha: 1)
     }
 }
