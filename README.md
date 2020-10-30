@@ -28,4 +28,4 @@ The goal is to create an application that displays trivia questions whith multip
 ## How to Run the Game
 - Clone the project
 - Open the project in Xcode
-- Run the project in the simulator
+- Run the project on the simulator or your Iphone device
