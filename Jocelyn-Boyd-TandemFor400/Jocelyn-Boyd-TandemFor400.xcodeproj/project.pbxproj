@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		088975A2254B861B00E9A469 /* TriviaNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088975A1254B861B00E9A469 /* TriviaNetworkManager.swift */; };
 		088975AB254BBE2400E9A469 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088975AA254BBE2400E9A469 /* UIViewController+Ext.swift */; };
-		0895933B254C7DD6004660EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0895933A254C7DD6004660EA /* HomeViewController.swift */; };
 		08DB5F6F25490846006A0543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F6E25490846006A0543 /* AppDelegate.swift */; };
 		08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB5F7025490846006A0543 /* SceneDelegate.swift */; };
 		08DB5F7625490846006A0543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB5F7425490846006A0543 /* Main.storyboard */; };
@@ -46,7 +45,6 @@
 /* Begin PBXFileReference section */
 		088975A1254B861B00E9A469 /* TriviaNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaNetworkManager.swift; sourceTree = "<group>"; };
 		088975AA254BBE2400E9A469 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		0895933A254C7DD6004660EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08DB5F6B25490846006A0543 /* Jocelyn-Boyd-TandemFor400.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jocelyn-Boyd-TandemFor400.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DB5F6E25490846006A0543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DB5F7025490846006A0543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				08DB5F7C25490847006A0543 /* Info.plist */,
 				08DB5FA12549086E006A0543 /* Apprentice_TandemFor400_Data.json */,
 				08DB5FAF25490AE2006A0543 /* Trivia.swift */,
-				0895933A254C7DD6004660EA /* HomeViewController.swift */,
 				08DB5FB82549193D006A0543 /* TrivaViewController.swift */,
 				088975A1254B861B00E9A469 /* TriviaNetworkManager.swift */,
 				088975AA254BBE2400E9A469 /* UIViewController+Ext.swift */,
@@ -294,7 +291,6 @@
 				088975AB254BBE2400E9A469 /* UIViewController+Ext.swift in Sources */,
 				088975A2254B861B00E9A469 /* TriviaNetworkManager.swift in Sources */,
 				08DB5FB025490AE2006A0543 /* Trivia.swift in Sources */,
-				0895933B254C7DD6004660EA /* HomeViewController.swift in Sources */,
 				08DB5F7125490846006A0543 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
