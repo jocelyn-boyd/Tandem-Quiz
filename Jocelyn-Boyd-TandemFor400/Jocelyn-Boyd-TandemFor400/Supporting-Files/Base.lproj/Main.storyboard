@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,17 +14,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TrivaViewController" customModule="Jocelyn_Boyd_TandemFor400" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-Jg-Qg7">
-                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Kp-gYt">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="340"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-c1-seU">
-                                                <rect key="frame" x="123" y="229" width="169" height="41"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-c1-seU">
+                                                <rect key="frame" x="122" y="229" width="170" height="41"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="Play New Round">
@@ -33,7 +35,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was Tandem previous name?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7q-Qf-RXa">
-                                                <rect key="frame" x="30" y="152.5" width="540" height="35"/>
+                                                <rect key="frame" x="30" y="135.5" width="354" height="69.5"/>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -50,13 +52,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-tZ-z6K">
-                                        <rect key="frame" x="0.0" y="340" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="340" width="414" height="418"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-eQ-b3e">
-                                                <rect key="frame" x="8" y="7.5" width="584" height="177.5"/>
+                                                <rect key="frame" x="8" y="7.5" width="398" height="395.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-bg-TYT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="584" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                         <state key="normal" title="Tandem">
@@ -67,7 +69,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-zq-8ep">
-                                                        <rect key="frame" x="0.0" y="49.5" width="584" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="104" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                         <state key="normal" title="Burger Shack">
@@ -78,7 +80,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-c7-Ysy">
-                                                        <rect key="frame" x="0.0" y="99" width="584" height="29"/>
+                                                        <rect key="frame" x="0.0" y="208" width="398" height="83.5"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                         <state key="normal" title="Extraordinary Humans">
@@ -89,7 +91,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-24-p3d">
-                                                        <rect key="frame" x="0.0" y="148" width="584" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="311.5" width="398" height="84"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                         <state key="normal" title="Devmynd">
@@ -118,15 +120,15 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-hN-Gsq" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-rH-XBl">
-                                        <rect key="frame" x="8" y="42.5" width="584" height="4"/>
+                                        <rect key="frame" x="8" y="42.5" width="398" height="4"/>
                                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                                         <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX/10 Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-DQ-wAu">
-                                        <rect key="frame" x="450.5" y="16.5" width="141.5" height="21"/>
+                                        <rect key="frame" x="264.5" y="16.5" width="141.5" height="21"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -139,6 +141,7 @@
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="leading" secondItem="LGf-hN-Gsq" secondAttribute="leadingMargin" id="7mw-sw-JmF"/>
                                     <constraint firstAttribute="height" constant="60" id="BI8-hZ-28N"/>
                                     <constraint firstAttribute="bottom" secondItem="Mp7-rH-XBl" secondAttribute="bottom" constant="13.5" id="aLK-lQ-M2M"/>
+                                    <constraint firstItem="M3b-DQ-wAu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LGf-hN-Gsq" secondAttribute="leading" constant="20" symbolic="YES" id="mCe-mu-cDS"/>
                                     <constraint firstItem="Mp7-rH-XBl" firstAttribute="trailing" secondItem="LGf-hN-Gsq" secondAttribute="trailingMargin" id="vvK-38-tyB"/>
                                     <constraint firstItem="M3b-DQ-wAu" firstAttribute="top" secondItem="LGf-hN-Gsq" secondAttribute="top" constant="16.5" id="x7H-fa-K2f"/>
                                 </constraints>
