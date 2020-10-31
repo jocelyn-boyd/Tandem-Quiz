@@ -36,7 +36,7 @@ class TrivaViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func answerButtonPressed(_ sender: UIButton) {
-        // TODO: Remove the alert and change the color of the buttons to reflect if the selected answer was correct or incorrect, refresh the view with a new questions after a couple of sections
+        // TODO: Remove the alert and change the color of the buttons to reflect if the selected answer was correct or incorrect, refresh the view with a new question after a couple of seconds
         let question = triviaInfo[currentQuestionIndex - 1]
         if sender.titleLabel?.text == question.correctAnswer {
             showAlert(title: "Correct", message: "Way to go!") {
@@ -55,8 +55,8 @@ class TrivaViewController: UIViewController {
         currentQuestionIndex = 0
         loadTriviaDataFromJSON()
         loadNewQuestion()
-        enableDisableAnswerButtons(isEnabled: true)
         updateProgressBar()
+        enableDisableAnswerButtons(isEnabled: true)
     }
     
     // MARK: - Private Methods
@@ -110,11 +110,11 @@ class TrivaViewController: UIViewController {
     private func updateScore() {
         switch score {
         case 10:
-            questionLabel.text = "A perfect 10!"
+            questionLabel.text = "Awesome! A perfect 10!"
         case 5...9:
-            questionLabel.text = "Pretty Good! You scored \(score) / 10 correct"
+            questionLabel.text = "Pretty Good! You scored \(score) / 10 correct."
         default:
-            questionLabel.text = "You almost had it. You scored \(score) / 10 correct!"
+            questionLabel.text = "You almost had it. You scored \(score) / 10 correct."
         }
     }
     
@@ -122,7 +122,8 @@ class TrivaViewController: UIViewController {
         let questionNumber = currentQuestionIndex
         questionCounterLabel.text? = "\(questionNumber) / 10 Questions"
         triviaProgressBar.progress = Float(questionNumber) / 10
-        // TODO: Alternate colors on progress bar -> green for correctly and red incorrectly
+        triviaProgressBar.progressTintColor = UIColor(red: 17 / 255, green: 138 / 255, blue: 178 / 255, alpha: 1)
+        // TODO: Alternate colors on progress bar -> green for correct and red incorrect
     }
     
     private func enableDisableAnswerButtons(isEnabled: Bool) {

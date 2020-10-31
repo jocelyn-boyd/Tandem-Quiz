@@ -8,8 +8,6 @@
 import Foundation
 
 class TriviaBundleFetcher {
-    
-    // add loadTriviaDataFromJSON() from TriviaViewControllers
     static let manager = TriviaBundleFetcher()
     private init() {}
     
